@@ -688,7 +688,8 @@ a {
   padding: 40px 32px;
 }
 
-.box-img:hover .text-overlay .box-img:focus .text-overlay {
+.box-img:hover .text-overlay,
+.box-img:focus .text-overlay {
   transform: translateY(0%);
 }
 .container-items {
