@@ -411,7 +411,7 @@ a {
 
 .customers-item {
   display: inline-block;
-  width: calc(100% - 120px) / 6;
+  width: calc((100% - 120px) / 6);
   height: 88px;
 }
 
@@ -594,11 +594,12 @@ a {
   background-color: var(--button-color);
   fill: var(--text-white-color);
   border: none;
-
-  .button-svg {
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
 }
+
+.button-svg {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* ------------------Button-portfolio----------------- */
 
 .scope {
@@ -687,7 +688,7 @@ a {
   padding: 40px 32px;
 }
 
-.box-img:hover .text-overlay {
+.box-img:hover .text-overlay .box-img:focus .text-overlay {
   transform: translateY(0%);
 }
 .container-items {
