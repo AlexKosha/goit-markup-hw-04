@@ -171,6 +171,7 @@ a {
   line-height: 1.5;
   font-weight: 400;
   letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-contacts.address {
@@ -202,6 +203,7 @@ a {
   padding: 188px 0;
   margin-left: auto;
   margin-right: auto;
+  background-size: cover;
 }
 
 .page-title {
@@ -336,7 +338,7 @@ a {
 }
 
 .container-team {
-  padding: 32px 16px;
+  padding: 32px 0;
 }
 
 .name-title {
@@ -385,11 +387,12 @@ a {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-soc-link:hover {
+.team-soc-link:hover,
+.team-soc-link:focus {
   background-color: var(--social-hover);
 }
 
-.soc-team-svg {
+.svg-team-soc {
   fill: var(--social-icon);
 }
 
@@ -406,7 +409,7 @@ a {
   justify-content: center;
 }
 
-.customer-item {
+.customers-item {
   display: inline-block;
   width: calc(100% - 120px) / 6;
   height: 88px;
@@ -426,7 +429,8 @@ a {
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.customers-item-link:hover {
+.customers-item-link:hover,
+.customers-item-link:focus {
   border: 1px solid var(--customers-hover);
   color: var(--customers-hover);
 }
@@ -525,8 +529,13 @@ a {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-item-link:hover {
+.footer-item-link:hover,
+.footer-item-link:focus {
   background-color: var(--footer-link-hover);
+}
+
+.footer-svg {
+  fill: var(--social-icon);
 }
 
 /*---------------------backdrop-----------------  */
@@ -557,6 +566,9 @@ a {
   transform: translate(-50%, -50%) scale(1);
   background-color: #fcfcfc;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 .modal-button {
@@ -569,6 +581,12 @@ a {
   width: 24px;
   height: 24px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-button:hover,
@@ -576,6 +594,10 @@ a {
   background-color: var(--button-color);
   fill: var(--text-white-color);
   border: none;
+
+  .button-svg {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 /* ------------------Button-portfolio----------------- */
 
@@ -603,9 +625,9 @@ a {
   border: 1px solid var(--active-color);
   border-radius: 4px;
   padding: 12px 24px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -637,7 +659,8 @@ a {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.scope-link:hover {
+.scope-link:hover,
+.scope-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -665,7 +688,7 @@ a {
 }
 
 .box-img:hover .text-overlay {
-  transform: translateY(0);
+  transform: translateY(0%);
 }
 .container-items {
   padding: 32px 16px;
