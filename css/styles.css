@@ -126,7 +126,7 @@ a {
 }
 
 .heder-nav-list-item.link-focus:hover,
-.heder-nav-list-item-focus:focus {
+.heder-nav-list-item.link-focus:focus {
   color: var(--button-color);
 }
 
